@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'reactive/rack/rewrite/version'
+require 'reactive_rack_rewrite/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "reactive-rack-rewrite"
-  spec.version       = Reactive::Rack::Rewrite::VERSION
+  spec.version       = ReactiveRackRewrite::VERSION
   spec.authors       = ["Sergey Gernyak"]
   spec.email         = ["sergeg1990@gmail.com"]
   spec.summary       = %q{TODO: Write a short summary. Required.}
