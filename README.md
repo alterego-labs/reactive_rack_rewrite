@@ -1,6 +1,10 @@
-# Reactive::Rack::Rewrite
+# ReactiveRackRewrite
 
-TODO: Write a gem description
+There is some very useful gem called [rack-rewrite](https://github.com/jtrupiano/rack-rewrite).
+But it provides ability to write rule statically and after you added new rules the rails server must be restarted.
+
+This gem allows you to manage rewrite rules through admin panel and
+after some changes they will be applied immediately!
 
 ## Installation
 
@@ -17,6 +21,12 @@ And then execute:
 Or install it yourself as:
 
     $ gem install reactive-rack-rewrite
+
+Then insert next code into `application.rb`:
+
+```ruby
+config.middleware.insert_before(Rack::Runtime, Rack::Rewrite, klass: ReactiveRackRewrite::RuleSet)
+```
 
 ## Usage
 
